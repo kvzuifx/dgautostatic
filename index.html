@@ -53,14 +53,21 @@
       font-size: 14px;
       margin-bottom: 8px;
     }
+
     .thin-text {
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: 100;
-      color: #EB5E28;
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #EB5E28;
+  display: flex;
+  position: relative;
+  margin-left: 60px; /* Adjust the value as needed */
+}
 
       .orange-text {
         color:#EB5E28;
     }
+
     .thin-text2 {
   font-weight: 140;
   color: #EB5E28;
@@ -169,7 +176,21 @@ html {
     opacity: 0;
     pointer-events: none;
 }
+.location-container {
+  display: flex;
+  align-items: center; /* Align icon with text */
+  gap: 5px; /* Adjust spacing between icon and text */
+}
 
+.location-container i {
+  font-size: 18px; /* Adjust icon size if needed */
+  color: #EB5E28; /* Match branding color */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
 
 </style>
 <head>
@@ -226,12 +247,12 @@ html {
                 Email : designergates.automation@gmail.com
               </span>
             </a>
-            <a href="">
+            <!-- <a href="">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
+              <span>  <a class="nav-link" href="#location-section"> Location</a>
+             
               </span>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -240,6 +261,7 @@ html {
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
               <span>
+                <img src="images/fevicon.png" alt="DesignerGates Logo" class="logo">
                 DesignerGates &amp; Automation <i><p class="thin-text">  where security meets sophistication </p> </i>
               </span>
             </a>
@@ -730,8 +752,10 @@ html {
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
+                <span id="location-section">
+                  Location <p> 
+                  DesignerGates & Automation Workshop & Office: 8-4-393, Beside Erragadda Metro station, Hyderabad, Telangana -500018.
+                </p>
                 </span>
               </a>
               <a href="tel:+918328568263">
