@@ -1,0 +1,31 @@
+digraph {
+	E [label="Input Tokens"]
+	E1 [label="Embedding Layer"]
+	E2 [label="Positional Encoding (CNN)"]
+	E3 [label="Multi-Head Self-Attention (CNN)"]
+	E4 [label="Feed-Forward Network (CNN)"]
+	E5 [label="Conv1D + Dropout"]
+	E6 [label="Repeat N Layers"]
+	D [label="Target Tokens"]
+	D1 [label="Embedding Layer"]
+	D2 [label="Positional Encoding (CNN)"]
+	D3 [label="Masked Multi-Head Attention (CNN)"]
+	D4 [label="Cross-Attention (CNN) + Encoder Output"]
+	D5 [label="Feed-Forward Network (CNN)"]
+	D6 [label="Dense Layer + Softmax"]
+	D7 [label="Repeat N Layers"]
+	E -> E1
+	E1 -> E2
+	E2 -> E3
+	E3 -> E4
+	E4 -> E5
+	E5 -> E6
+	D -> D1
+	D1 -> D2
+	D2 -> D3
+	D3 -> D4
+	D4 -> D5
+	D5 -> D6
+	D6 -> D7
+	E6 -> D4 [label="Encoder Output"]
+}
